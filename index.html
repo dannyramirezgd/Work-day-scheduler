@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -16,63 +28,81 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">HELP ME</p>
+      <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <main class="m-auto col-12 col-lg-9">
-      <div id="9" class="row justify-content-around">
-        <p class="col-2 hour">9am</p>
-        <textarea class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">10am</p>
-        <textarea id="10" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">11am</p>
-        <textarea id="11" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">12pm</p>
-        <textarea id="12" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">1pm</p>
-        <textarea id="1" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">2pm</p>
-        <textarea id="2" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">3pm</p>
-        <textarea id="3" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">4pm</p>
-        <textarea id="4" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-      <div class="row justify-content-around">
-        <p class="col-2 hour">5pm</p>
-        <textarea id="5" class="event-text col-9"></textarea>
-        <button class="saveBtn col-1"><span class="oi oi-calendar"></span></button>
-      </div>
-    </main>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/script.js"></script>
+      <ul>
+        <li id="9" class="row justify-content-around">
+          <p class="col-2 hour">9am</p>
+          <textarea class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="10" class="row justify-content-around">
+          <p class="col-2 hour">10am</p>
+          <textarea class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="11" class="row justify-content-around">
+          <p class="col-2 hour">11am</p>
+          <textarea  class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="12" class="row justify-content-around">
+          <p class="col-2 hour">12pm</p>
+          <textarea class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="1" class="row justify-content-around">
+          <p class="col-2 hour">1pm</p>
+          <textarea  class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="2" class="row justify-content-around">
+          <p class="col-2 hour">2pm</p>
+          <textarea  class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="3" class="row justify-content-around">
+          <p class="col-2 hour">3pm</p>
+          <textarea  class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="4" class="row justify-content-around">
+          <p class="col-2 hour">4pm</p>
+          <textarea  class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+        <li id="5" class="row justify-content-around">
+          <p class="col-2 hour">5pm</p>
+          <textarea  class="event-text col-9"></textarea>
+          <button class="saveBtn col-1">
+            <span class="oi oi-calendar"></span>
+          </button>
+        </li>
+    </ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/script.js"></script>
   </body>
 </html>

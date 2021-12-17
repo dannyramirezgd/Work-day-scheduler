@@ -1,5 +1,7 @@
 //store all daily events into object
-events = [];
+events = {
+
+};
 //display current day at top of calendar
 $("#currentDay").text(moment().format('MMM Do, YYYY'));
 //store current moment in var so it will update each day
@@ -11,12 +13,11 @@ var dayAudit = moment();
 //make time blocks editable by clicking into them
 $(".saveBtn").on("click", function(){
     //get textarea's current value/text
-    var text = $(".event-text").val();
-    var time = $(".event-text").closest(".row").attr("id");
-    var index = $(".event-text").closest(".row").index();
+    var eventText = $(this).siblings(".event-text").val()
+    var position = $(this).parent().index();
 
-    //events.push({time:[text[index]]})
-    console.log(time)
+
+    console.log(position);
     //savePlanner();
 });
 
@@ -31,15 +32,6 @@ var loadEvents = function(){
 
 if(!events){
     events = {
-        "9":[],
-        "10":[],
-        "11":[],
-        "12":[],
-        "1":[],
-        "2":[],
-        "3":[],
-        "4":[],
-        "5":[],
     }
 }
 }
