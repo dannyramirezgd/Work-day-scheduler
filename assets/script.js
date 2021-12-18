@@ -76,7 +76,7 @@ var loadEvents = function(){
     if (JSON.parse(localStorage.getItem("currentDate")) !== moment().format("Do")){
         localStorage.clear();
     }
-    //when the clock hits 23:59, the local storage clears, otherwise it will display what it has
+    //if local storage is empty recreate the events with empty text strings
     if(localStorage.getItem("today") === null){
         events= [
             {
