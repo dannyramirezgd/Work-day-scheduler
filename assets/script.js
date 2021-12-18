@@ -62,6 +62,10 @@ events = [
 //display current day at top of calendar
 $("#currentDay").text(moment().format('MMM Do, YYYY'));
 
+var storeCurrentDay = function () {
+    localStorage.setItem("currentDate", JSON.stringify(moment().format("Do")));
+}
+
 //when blocks are saved or edited save to local storage
 var savePlanner = function(){
     localStorage.setItem("today", JSON.stringify(events))
@@ -69,6 +73,9 @@ var savePlanner = function(){
 
 //load local storage but only for the current day
 var loadEvents = function(){
+    if (JSON.parse(localStorage.getItem("currentDate")) !== moment().format("Do")){
+        localStorage.clear();
+    }
     //when the clock hits 23:59, the local storage clears, otherwise it will display what it has
     if(localStorage.getItem("today") === null){
         events= [
@@ -133,10 +140,7 @@ var loadEvents = function(){
         ];
     } else {
         events = JSON.parse(localStorage.getItem("today"))
-        }
-    if (moment().format("HH:mm") >= "23:58"){
-        localStorage.clear();
-    };   
+        } 
 };
 loadEvents();
 //page load all rows with time, text areas, and buttons, along with any previous event data and classes
@@ -180,3 +184,4 @@ $(".saveBtn").on("click", function(event){
     events[eventIndex].text = eventText
     savePlanner();
 });
+storeCurrentDay();
