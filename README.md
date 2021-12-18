@@ -1,4 +1,4 @@
-# challenge-5
+# Work Day Scheduler
 
 ## Purpose
 To create a daily task scheduler by each hour of the workday
