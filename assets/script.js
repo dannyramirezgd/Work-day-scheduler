@@ -70,12 +70,75 @@ var savePlanner = function(){
 //load local storage but only for the current day
 var loadEvents = function(){
     //when the clock hits 23:59, the local storage clears, otherwise it will display what it has
-    if (moment().format("HH:mm") <= "23:58"){
+    if(localStorage.getItem("today") === null){
+        events= [
+            {
+                //to create class based on time of day
+                militaryHour: "09",
+                //to give row each label
+                time: "09",
+                //give each row context for am or pm
+                ext: "am",
+                //event text that user will input
+                text: "",
+            },
+            {
+                militaryHour: "10",
+                time: "10",
+                ext: "am",
+                text: "",
+            },
+            {
+                militaryHour:"11",
+                time:"11",
+                ext:"am",
+                text:""
+            },
+            {
+                militaryHour:"12",
+                time:"12",
+                ext:"pm",
+                text:"",
+            },
+            {
+                militaryHour:"13",
+                time:"01",
+                ext:"pm",
+                text:"",
+            },
+            {
+                militaryHour:"14",
+                time:"02",
+                ext:"pm",
+                text:"",
+            },
+            {
+                militaryHour:"15",
+                time:"03",
+                ext:"pm",
+                text:"",
+            },
+            {
+                militaryHour: "16",
+                time:"04",
+                ext:"pm",
+                text:"",
+            },
+            {
+                militaryHour:"17",
+                time:"05",
+                ext:"pm",
+                text:"",
+            }
+        ];
+    } else {
         events = JSON.parse(localStorage.getItem("today"))
-    }else{
+        }
+    if (moment().format("HH:mm") >= "23:58"){
         localStorage.clear();
     };   
 };
+loadEvents();
 //page load all rows with time, text areas, and buttons, along with any previous event data and classes
 $.each(events, function(i){
     loadEvents();
@@ -117,4 +180,3 @@ $(".saveBtn").on("click", function(event){
     events[eventIndex].text = eventText
     savePlanner();
 });
-loadEvents();
