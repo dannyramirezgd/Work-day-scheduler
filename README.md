@@ -14,7 +14,7 @@ To create a daily task scheduler by each hour of the workday
 - Javascript
 
 ## Website
-https://dannyramirezgd.github.io/work-day-scheduler/
+https://dannyramirezgd.github.io/Work-day-scheduler/
 
 ## Screenshot of functionality
 ![screenshot](https://github.com/dannyramirezgd/challenge-5/blob/main/assets/screencapture.png)
